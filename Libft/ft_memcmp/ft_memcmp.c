@@ -2,8 +2,8 @@
 
 int ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-    const char *cstr1 = str1;
-    const char *cstr2 = str2;
+    const char *cstr1 = (char *)str1;
+    const char *cstr2 = (char *)str2;
 
     while(n-- && (*cstr1++ != '\0' && *cstr2++ != '\0'))
     {
