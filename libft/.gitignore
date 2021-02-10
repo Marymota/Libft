@@ -1,0 +1,16 @@
+a.out
+.swp
+.vscode
+/build
+/dist
+/norminette
+/norminette.egg-info
+pdf
+deploy.sh
+Dockerfile
+LICENSE
+README.md
+requirements.txt
+setup.py
+
+
