@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/10 18:42:24 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/11 15:27:11 by marmota          ###   ########.fr       */
+/*   Created: 2021/02/13 18:02:31 by marmota           #+#    #+#             */
+/*   Updated: 2021/02/13 19:32:47 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
+	char	*c_little;
+	char	*c_big;
+	char	*flag;
 	size_t	i;
-	size_t	j;
 
-	if (!src && !dst)
-		return (0);
+	c_big = (char *)big;
+	if (!*little)
+		return (c_big);
+	flag = (char *)big;
 	i = 0;
-	j = 0;
-	while (dst[i] && i < size)
-		i++;
-	while (src[j] && i + 1 < size)
+	c_little = (char *)little;
+	while (len-- && *c_little)
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		while (*c_little++ == *c_big)
+		{
+			if (i++ == 0)
+				flag = c_big;
+		}
+		if (i && i == ft_strlen(little))
+			return (flag);
+		i = 0;
+		c_little = (char *)little;
+		c_big++;
 	}
-	if (i < size)
-		dst[i] = '\0';
-	while (src[j])
-	{
-		i++;
-		j++;
-	}
-	return (i);
+	return (0);
 }

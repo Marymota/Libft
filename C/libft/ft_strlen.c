@@ -6,18 +6,18 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 18:44:41 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/10 18:44:42 by marmota          ###   ########.fr       */
+/*   Updated: 2021/02/12 16:13:25 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while (*str++)
+	while (*s++)
 	{
 		i++;
 	}

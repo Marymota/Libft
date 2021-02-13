@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/11 19:48:10 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/11 19:48:12 by marmota          ###   ########.fr       */
+/*   Created: 2021/02/12 16:15:30 by marmota           #+#    #+#             */
+/*   Updated: 2021/02/12 16:15:33 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c == -1)
-		return (-1);
-	else if (c < 0)
-		return (c + 256);
-	if (c <= 'z' && 'a' <= c)
-		return (c - 32);
-	return (c);
+	char	*str;
+	char	*found;
+
+	if (!*s)
+		return (0);
+	found = (char *)s;
+	str = (char *)s;
+	while (*str)
+	{
+		if (*str == (char )c)
+			found = str;
+		str++;
+	}
+	if (c == 0)
+		return (str);
+	if (ft_isascii(c))
+		return (found);
+	return (0);
 }

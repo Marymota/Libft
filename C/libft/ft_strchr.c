@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/11 19:48:10 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/11 19:48:12 by marmota          ###   ########.fr       */
+/*   Created: 2021/02/11 19:48:34 by marmota           #+#    #+#             */
+/*   Updated: 2021/02/11 19:51:34 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c == -1)
-		return (-1);
-	else if (c < 0)
-		return (c + 256);
-	if (c <= 'z' && 'a' <= c)
-		return (c - 32);
-	return (c);
+	char	*str;
+
+	str = (char *)s;
+	while (*str)
+	{
+		if (*str == (char)c)
+			return (str);
+		str++;
+	}
+	if ((char)c == 0)
+		return (str);
+	return (0);
 }
