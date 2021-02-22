@@ -9,7 +9,7 @@ OBJS = $(SRC:.c=.o)
 all:		$(NAME)
 
 $(NAME): 	$(OBJS)
-			$(LIBOPT) $@
+			$(LIBOPT) $@ $^
 
 clean:
 		rm -f $(OBJS)
