@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 23:58:41 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/17 00:10:38 by marmota          ###   ########.fr       */
+/*   Created: 2021/02/26 21:36:54 by marmota           #+#    #+#             */
+/*   Updated: 2021/02/26 21:36:56 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
 
-	if (s)
-		len = ft_strlen(s);
+	if (!s || fd < 0)
+		return ;
+	len = ft_strlen(s);
 	write(fd, s, len);
 }

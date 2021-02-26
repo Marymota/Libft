@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/13 18:02:31 by marmota           #+#    #+#             */
+/*   Updated: 2021/02/25 17:15:39 by marmota          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char    *ft_strnstr(const char *big, const char *little, size_t len)
+{
+	char    *c_little;
+	char    *c_big;
+	char    *flag;
+	size_t    i;
+
+	if (ft_strlen((char *)big) < ft_strlen((char *)little))
+		return (0);
+	c_big = (char *)big;
+	if (!*little)
+		return (c_big);
+	flag = (char *)big;
+	i = 0;
+	c_little = (char *)little;
+	while (*c_big && len != 0)
+	{
+		if (*c_big == *c_little)
+			flag = c_big;
+		while (*c_little && len != 0)
+		{
+			if (*c_big != *c_little++)
+			{
+				c_big -= i;
+				len += i;
+				c_little = (char *)little;
+				i = 0;
+			}
+			else if (i++ == 0)
+				flag = c_big;
+			c_big++;
+			len--;
+		}
+		if (i == ft_strlen((char *)little))
+			return(flag);
+	}
+	if (!*c_little && !*c_big)
+	  return(flag);
+	return (0);
+}
