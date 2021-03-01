@@ -4,15 +4,20 @@ CFLAGS = -Wall -Wextra -Werror
 LIB = libft.h
 LIBOPT = ar rcs
 SRC = $(wildcard *.c)
+BSRC = $(wildcard *lst*.c)
 OBJS = $(SRC:.c=.o)
+BOBJS = $(BSRC:.c=.o)
 
 all:		$(NAME)
 
 $(NAME): 	$(OBJS)
 			$(LIBOPT) $@ $^
 
+bonus: $(BOBJS) $(OBJS)
+		$(LIBOPT) $(NAME) $^
+
 clean:
-		rm -f $(OBJS)
+		rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
 		rm -f $(NAME)
