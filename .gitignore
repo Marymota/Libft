@@ -12,5 +12,7 @@ LICENSE
 README.md
 requirements.txt
 setup.py
-
-
+/libft-war-machine
+/libft-unit-test
+/libftTester
+/archived_functions
