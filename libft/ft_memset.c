@@ -6,7 +6,7 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 18:41:11 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/22 18:24:38 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/01 14:03:38 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*str;
+	unsigned char	*str;
 
-	str = (char *)s;
+	str = s;
 	while (n--)
 		*str++ = c;
 	return (s);
