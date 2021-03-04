@@ -6,21 +6,20 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 18:08:49 by marmota           #+#    #+#             */
-/*   Updated: 2021/03/01 18:45:13 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/04 21:19:17 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
 }
 	t_list;

@@ -13,7 +13,7 @@ all:		$(NAME)
 $(NAME): 	$(OBJS)
 			$(LIBOPT) $@ $^
 
-bonus: $(BOBJS) $(OBJS)
+bonus: 	$(NAME) $(BOBJS)
 		$(LIBOPT) $(NAME) $^
 
 clean:
@@ -25,7 +25,7 @@ fclean: clean
 re:		fclean all
 
 so:
-	$(CC) -c $(CFLAGS) -fPIC $(SRC)
+	$(CC) -fPIC -c $(CFLAGS) $(SRC)
 	gcc -shared -o libft.so $(OBJS)
 
 .PHONY: all clean fclean re
