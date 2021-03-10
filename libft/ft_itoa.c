@@ -36,7 +36,7 @@ static int	negative_numbers(int num)
 	return (0);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char		*ret;
 	int			i;

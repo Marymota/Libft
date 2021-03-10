@@ -14,7 +14,7 @@
 
 static int	count_words(const char *str, char c)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (*str)
@@ -29,7 +29,7 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	*start;
 	char	**ret;
