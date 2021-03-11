@@ -6,7 +6,7 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 18:52:10 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/10 18:52:16 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/05 15:47:13 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
-	char	*str;
-
-	str = (char *)s;
 	while (n--)
-		*str++ = 0;
+		*(char *)s++ = '\0';
 	return (0);
 }

@@ -6,17 +6,13 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 19:48:20 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/11 19:48:22 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/11 16:04:00 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if (c == -1)
-		return (-1);
-	else if (c < 0)
-		return (c + 256);
 	if (c <= 'Z' && 'A' <= c)
-		return (c + 32);
+		c += 32;
 	return (c);
 }
