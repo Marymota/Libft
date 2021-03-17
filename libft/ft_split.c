@@ -6,54 +6,56 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/26 20:59:55 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/26 21:48:00 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/17 21:34:01 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *str, char c)
+static int	count_words(const char *s, char c)
 {
-	int		i;
+	int		word_count;
+	int i;
 
 	i = 0;
-	while (*str)
+	word_count = 0;
+	while(s[i])
 	{
-		if (*str++ != c)
-			++i;
-		while (*str && *str != c)
-			str++;
-		while (*str && *str == c)
-			str++;
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			word_count++;
+		while (s[i] && (s[i] != c))
+			i++;
 	}
-	return (i);
+	return (word_count);
 }
 
 char		**ft_split(char const *s, char c)
 {
-	char	*start;
 	char	**ret;
 	int		i;
+	int 	j;
+	int		arr_index;
 
 	if (!s)
 		return (0);
 	ret = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!ret)
 		return (0);
-	i = 0;
-	while (*s)
+	ret[count_words(s, c)] = 0;
+	arr_index = 0;
+	while (*s && *s == c)
+		s++;
+	j = 0;
+	while (s[j])
 	{
-		if (*s && *s != c)
-		{
-			start = (char *)s;
-			while (*s && *s != c)
-				++s;
-			ret[i] = (char *)malloc(sizeof(char) * (s - start + 1));
-			ft_strlcpy(ret[i++], start, (s - start + 1));
-		}
-		if (*s)
-			++s;
+		i = j;
+		while (s[j] && s[j] != c)
+			j++;
+		ret[arr_index++] = ft_substr(s, i, j - i);
+		while (s[j] && s[j] == c)
+			j++;
 	}
-	ret[i] = NULL;
 	return (ret);
 }
