@@ -6,7 +6,7 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 22:02:47 by marmota           #+#    #+#             */
-/*   Updated: 2021/02/28 22:02:49 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/17 21:36:48 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	negative_numbers(int num)
 	return (0);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*ret;
 	int			i;

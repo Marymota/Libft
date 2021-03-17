@@ -6,7 +6,7 @@
 /*   By: marmota <marmota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/26 20:59:55 by marmota           #+#    #+#             */
-/*   Updated: 2021/03/17 21:34:01 by marmota          ###   ########.fr       */
+/*   Updated: 2021/03/17 21:37:38 by marmota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 static int	count_words(const char *s, char c)
 {
 	int		word_count;
-	int i;
+	int		i;
 
 	i = 0;
 	word_count = 0;
-	while(s[i])
+	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
@@ -31,11 +31,11 @@ static int	count_words(const char *s, char c)
 	return (word_count);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**ret;
 	int		i;
-	int 	j;
+	int		j;
 	int		arr_index;
 
 	if (!s)
