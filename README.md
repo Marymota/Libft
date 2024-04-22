@@ -31,5 +31,5 @@ I extended my library with additional functions not found in libc or offering en
 The bonus part introduced list manipulation functions. Building upon the mandatory part, these functions empowered me to work with linked lists efficiently.
 
 ---
-# 42
+# 42 School
 This project is an integral part of the curriculum at 42 Lisboa, emphasizing practical learning, collaboration, and problem-solving. It sets the stage for your journey into the world of programming, equipping you with essential skills and knowledge for future endeavors.
