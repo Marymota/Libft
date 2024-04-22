@@ -4,16 +4,6 @@
 
 Libft is my first step into C programming. It aims to provide a collection of general-purpose functions that my future C programs can rely upon. By implementing and understanding these functions, I was able to build a foundational understanding of C programming and develop a library that was invaluable in my future assignments.
 
-## Common Instructions
-
-- **Language**: C
-- **Norm Compliance**: Norminette is tailored to enforce a particular coding style, ensuring students adhere to 42's guidelines by encompassing rules for formatting, naming conventions, code organization, and other facets of code quality.
-- **Stability**: Functions should not cause unexpected terminations or memory issues.
-- **Memory Management**: Properly manage heap allocated memory, avoiding leaks.
-- **Makefile**: Include a Makefile meeting specified criteria.
-- **Bonus Handling**: Separate bonuses from the main project, if applicable.
-- **Testing**: Encouraged to create and utilize test programs for validation.
-
 ## Mandatory Part
 
 The mandatory part encompassed the creation of a library (libft.a) and included functions replicating standard libc functionalities. Technical considerations ensured code quality and compliance.
