@@ -22,4 +22,4 @@ The bonus part introduced list manipulation functions. Building upon the mandato
 
 ---
 # 42 School
-This project is an integral part of the curriculum at 42 Lisboa, emphasizing practical learning, collaboration, and problem-solving. It sets the stage for your journey into the world of programming, equipping you with essential skills and knowledge for future endeavors.
+This project is an integral part of the curriculum at [42 Lisboa](https://42lisboa.com/), emphasizing practical learning, collaboration, and problem-solving. It sets the stage for your journey into the world of programming, equipping you with essential skills and knowledge for future endeavors.
